@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>indexOf2</title>
+</head>
+<body>
+    
+    <p>Click the button to locate the last occurrence of a specified value, starting the search at position 20.</p>
+
+    <button onclick="myFunction()">Try it</button>              <!-- When button is clicked, the function myFunction is executed -->
+    
+    <p id="demo"></p>                                           <!-- This is where the character index number will be displayed -->
+    
+
+
+    <script>
+
+    function myFunction() {
+        var myString = "Hello planet earth, you are a great planet.";       // This is my string
+        var myIndexNumber = myString.lastIndexOf("planet", 20);              // Here I specify the word I am searching for which is "planet" and I am saying, where BEFORE the indexOf 20 did the word "planet" occur.
+        document.getElementById("demo").innerHTML = myIndexNumber;          // The index number for the first letter of "planet" is displayed to p id="demo"
+    }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

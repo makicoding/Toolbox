@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>charAt1</title>
+</head>
+<body>
+    <!-- Accessing a particular character in an array -->
+
+
+    <p>Modify the array index and character number in the JavaScript code</p>
+    <p>Then click the button to display your chosen letter of your chosen band.</p>
+    
+    <button onclick="myFunction()">Try it</button>                                      <!-- When the button is clicked myFunction is executed -->
+    
+    <p class="writeTheLetterHere"></p>
+    
+    
+
+
+    <script>
+      var bandNames = ["VAN HALEN", "AEROSMITH", "MOTLEY CRUE"];                        // Array of band names
+    
+    function myFunction() {
+      var myLetter = bandNames[1].charAt(2)                                             // Specify from the array bandName index, and of that, the character number.  // Change these numbers to change the band and your chosen letter.
+      document.getElementsByClassName("writeTheLetterHere")[0].innerHTML = myLetter;    // Your chosen letter of your chosen band from the above line will be displayed to p class="writeTheLetterHere"
+    }
+    </script>
+
+
+</body>
+</html>

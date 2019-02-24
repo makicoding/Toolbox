@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>How to display an array to a page using a for loop </h2>
+
+
+
+    <p id="demo"></p>
+    
+
+
+    <script>
+        // How to display an array to a page using a for loop 
+
+
+
+        // Variables defined
+        var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];    // An array of cars
+        var text = "";                                                  // This is where we will write the above list of cars to.  Initially it is empty.
+        var i;                                                          // i is the index.  Remember, in an array, the index starts at 0
+
+
+        // For Loop
+        for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";                                       // the list of cars will be added in order to the variable "text" with a line break afterwards.
+                                                                        // To understand +=, the long form would be the equivalent of writing:
+                                                                        // text = text + cars[i] + "<br>"       +       text + cars[i] + "<br>"         +       text + cars[i] + "<br>"         + ... and so on
+        }
+        document.getElementById("demo").innerHTML = text;               // Here we write the entire list to the paragraph with id "demo".
+
+
+
+    </script>
+
+</body>
+</html>

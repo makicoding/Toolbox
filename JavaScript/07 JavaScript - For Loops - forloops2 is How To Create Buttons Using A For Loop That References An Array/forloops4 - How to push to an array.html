@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>How to use the Push Method to add elements to an array</h2>
+
+    <p>The push method appends (i.e. adds) a new element to an array.</p>
+
+
+
+    
+    <button onclick="myFunction()">Click this to add a Lemon to the list</button>       <!-- When this button is clicked, the function myFunction is executed and Lemon is added to the end of the array -->
+    
+    <button onclick="madonna()">Click this to add a Strawberry to the list</button>     <!-- When this button is clicked, the function madonna is executed and Strawberry is added to the end of the array -->
+
+
+
+    <p id="demo"></p>                                                                   <!-- This is where the array will be displayed on the page -->
+    
+
+
+
+    <script>
+        // HOW TO USE THE PUSH METHOD TO ADD ELEMENTS TO AN ARRAY
+
+
+
+        // The initial array
+        var fruits = ["Banana", " Orange", " Apple", " Mango"];
+        
+        // The above array is displayed in p id="demo"
+        document.getElementById("demo").innerHTML = fruits;
+        
+
+
+        // When the function myFunction is executed...
+        function myFunction() {
+        fruits.push(" Lemon");                                           // the element "Lemon" is pushed to the fruits array
+        document.getElementById("demo").innerHTML = fruits;             // the newly updated fruits array is displayed to p id="demo"
+        }
+
+        // When the function myFunction is executed...
+        function madonna() {
+        fruits.push(" Strawberry");                                           // the element "Lemon" is pushed to the fruits array
+        document.getElementById("demo").innerHTML = fruits;             // the newly updated fruits array is displayed to p id="demo"
+        }
+
+
+
+
+        // append and prepend definition:
+
+        // append:	add (something) as an attachment or supplement
+        // prepend:	add (something) to the beginning of something else
+    
+    </script>
+
+</body>
+</html>

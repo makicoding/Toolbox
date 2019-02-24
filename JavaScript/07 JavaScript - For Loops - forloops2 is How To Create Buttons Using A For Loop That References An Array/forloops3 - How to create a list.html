@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>How to create a list using a for loop that references an array</h2>
+
+    <p id="demo"></p>
+    
+
+
+   
+    <script>
+    // How to create a list using a for loop that references an array
+
+        // Create an array
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        text = "<ul>";                                          // Create an opening for an unordered list
+        
+        
+        
+        // for loop
+        for (i = 0; i < fruits.length; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+        }
+
+
+        text += "</ul>";                                        // Create the closing for an unordered list
+
+        document.getElementById("demo").innerHTML = text;       // display the list to the p id="demo"
+    
+
+
+
+    </script>
+
+</body>
+</html>

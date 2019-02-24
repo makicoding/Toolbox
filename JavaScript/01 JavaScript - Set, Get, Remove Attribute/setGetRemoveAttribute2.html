@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set Get Remove Attribute 2</title>
+</head>
+<body>
+    
+    <input id="myInput" value="OK">
+
+    <p>Click Button 1 below to change the input field to an input button.</p>
+
+    <button onclick="julienK()">Button 1 - Press to change input field to an input button</button>    <!-- When this button is clicked, the function julienK is executed -->
+
+    <button onclick="filter()">Button 2 - Press to change input button to an input field</button>     <!-- When this button is clicked, the function filter is executed -->
+
+
+
+
+    <script>
+
+        function julienK() {
+        document.getElementById("myInput").setAttribute("type", "button");    // sets the attribute to be a button
+        }
+
+        function filter() {
+        document.getElementById("myInput").setAttribute("type", "input");     // sets the attribute to be an input box
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

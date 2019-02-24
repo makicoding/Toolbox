@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set Get Remove Attribute 4</title>
+</head>
+<body>
+    
+    <p>Click on a an animal to see its score:</p>
+
+    <ul>
+      <li onclick="myScoreFunction(this)" id="dog" data-scorepoints="1">Dog</li>
+      <li onclick="myScoreFunction(this)" id="cat" data-scorepoints="2">Cat</li>  
+      <li onclick="myScoreFunction(this)" id="horse" data-scorepoints="3">Horse</li>  
+    </ul>
+    <!--The attribute name should not contain any uppercase letters, and must be at least one character long after the prefix "data-"-->
+
+    
+
+
+    <script>
+
+        function myScoreFunction(animal) {
+        var petScore = animal.getAttribute("data-scorepoints");                   // retrieves the data stored in data-scorepoints
+        alert("The " + animal.innerHTML + " has a score of " + petScore + ".");   // displays the data as an alert
+        }
+        
+
+
+
+    </script>
+
+</body>
+</html>

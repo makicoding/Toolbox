@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>createElement1</title>
+
+
+    <style>
+        .demoClass {
+            height: 60px; 
+            color: magenta;
+            background-color: lightseagreen;
+        }
+
+        .myBtn {
+            color: blue;
+            font-size: 16px;
+
+            cursor: pointer;
+
+            position: absolute;
+            top: 25px;
+            left: 40px;
+        }
+    
+    </style>
+
+</head>
+<body>
+    
+    <script>
+
+    // Create a <button> element and append it to a <div> element:
+
+    // Create a div, assign a class
+    var divContainer = document.createElement("div");                   // Create a <div> element
+    divContainer.className = "demoClass";                               // Assign a class on divContainer called "demoClass"
+    document.body.appendChild(divContainer);                            // Append <div> to <body>
+
+    // Create a button, assign a class
+    var btn = document.createElement("button");                         // Create a <button> element
+    btn.className = "myBtn";                                            // Assign a class on btn called "myBtn"
+    var t1 = document.createTextNode("This is text.");                  // Create a text node
+    btn.appendChild(t1);                                                // Append the text to <btn>
+    document.getElementsByClassName("demoClass")[0].appendChild(btn);   // Append <button> to <div> with class="demoClass"
+
+
+
+
+
+
+    // append and prepend definition:
+
+    // append:	add (something) as an attachment or supplement
+    // prepend:	add (something) to the beginning of something else
+
+    </script>
+
+</body>
+</html>

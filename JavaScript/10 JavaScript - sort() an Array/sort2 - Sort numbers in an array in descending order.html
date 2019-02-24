@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sort2</title>
+</head>
+<body>
+    <!-- Sort numbers in an array in descending order -->
+
+    <p>Click the button to sort the array in descending order.</p>
+
+    <button onclick="myFunction()">Try it</button>                  <!-- When the button is clicked, the function myFunction is executed -->
+    
+    <p id="demo"></p>                                               <!-- This is where the score is displayed -->
+    
+
+
+    <script>
+        
+
+        var myScores = [40, 100, 1, 5, 25, 10];                     // Initial order of scores
+        document.getElementById("demo").innerHTML = myScores;       // scores displayed to p id="demo"
+        
+
+
+        function myFunction() {
+            myScores.sort(function(a, b){return b-a});              // the scores in the array are sorted in descending order
+            document.getElementById("demo").innerHTML = myScores;   // the sorted and updated array is displayed to p id="demo"
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set Get Remove Attribute 3</title>
+</head>
+<body>
+    
+    <input type="text" id="userInput1">Write input in this box</input>
+    <br>
+    <button onclick="collectiveSoul()">Button 1 - Click and display below what you just wrote in the input box above</button>   <!-- When the user clicks the button, the function collectiveSoul is executed -->
+    
+    <!-- add this line for function to write into -->
+    <p id="demo1"></p>   
+
+
+
+
+    <script>
+
+        function collectiveSoul(){
+        var myUserInput1 = document.getElementById("userInput1").value;     // Captures what the user typed in the input box
+        document.getElementById("demo1").innerHTML = myUserInput1;          // the string captured in the above lined of code is then written to the element p="demo1"
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

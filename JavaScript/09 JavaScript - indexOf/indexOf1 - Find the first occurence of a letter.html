@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>indexOf1</title>
+</head>
+<body>
+    
+    <p>Find the first occurrence of the letter "e" in a string, starting the search at position 0.</p>
+
+    <button onclick="myFunction()">Try it</button>              <!-- When button is clicked, the function myFunction is executed -->
+    
+    <p id="demo"></p>                                           <!-- This is where the character index number will be displayed -->
+    
+
+
+    <script>
+
+        function myFunction() {
+            var myString = "Hello world, welcome to the universe.";     // This is the string
+            var myIndexNumber = myString.indexOf("e", 0);                    // "e" here is the letter e that we are searching for. 0 here is the start point in the index for the search. 
+                                                                        // the letter "e" search can be replaced with a word, for example "universe"  
+            document.getElementById("demo").innerHTML = myIndexNumber;       // the index number for the first letter e will be displayed to p id="demo"
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set Get Remove Attribute 1</title>
+</head>
+<body>
+    
+    <a id="myAnchor">A Link: Go to w3schools.com</a>
+
+    <p>Click Button 1 to set the href attribute with a value of "www.w3schools.com" of the a element above.</p>
+    
+    <button onclick="myFunction()">Button 1 - Press to set href attribute</button>        <!-- When this button is clicked, the function myFunction is executed -->
+    
+    <button onclick="fooFighters()">Button 2 - Press to remove href attribute</button>    <!-- When this button is clicked, the function fooFighters is executed -->
+
+    
+
+
+    <script>
+
+        function myFunction() {
+          document.getElementById("myAnchor").setAttribute("href", "https://www.w3schools.com");    // sets the href anchor attribute
+        }
+        
+        function fooFighters() {
+          document.getElementById("myAnchor").removeAttribute("href", "https://www.w3schools.com"); // removes the href anchor attribute
+        }
+
+
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sort5</title>
+</head>
+<body>
+    <!-- Sort an array alphabetically -->
+
+    <p>Click the button to sort the array alphabetically.</p>
+
+    <button onclick="myFunction()">Try it</button>                  <!-- When the button is clicked, the function myFunction is executed -->
+    
+    <p id="demo"></p>                                               <!-- This is where the fruits array is displayed -->
+    
+
+
+    <script>
+        
+
+        var fruits = [" Banana", " Orange", " Apple", " Mango"];     // Initial order of fruits
+        document.getElementById("demo").innerHTML = fruits;          // fruits displayed to p id="demo"
+        
+
+
+        function myFunction() {
+            fruits.sort();                                           // the fruits array is sorted in alphabetical order
+            document.getElementById("demo").innerHTML = fruits;      // the newly sorted array is displayed to p id="demo"
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

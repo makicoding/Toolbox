@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>createElement1</title>
+</head>
+<body>
+    
+    <script>
+
+    // Create a button with text
+    var btn = document.createElement("button");         // Create a <button> element
+    var t1 = document.createTextNode("CLICK ME");       // Create a text node
+    btn.appendChild(t1);                                // Append the text to <button>
+    document.body.appendChild(btn);                     // Append <button> to <body>
+
+
+
+    // Create a paragraph with text
+    var para = document.createElement("p");                                     // Create a <p> element
+    var t2 = document.createTextNode("This is text in a <p> element. ");        // Create a text node
+    para.appendChild(t2);                                                       // Append the text to <p>
+    document.body.appendChild(para);                                            // Append <p> to <body>
+
+
+
+    // Create a div with text
+    var divContainer = document.createElement("div");                           // Create a <div> element
+    var t3 = document.createTextNode("This is text in a <div> element");        // Create a text node
+    para.appendChild(t3);                                                       // Append the text to <div>
+    document.body.appendChild(divContainer);                                    // Append <div> to <body>
+
+
+
+
+
+
+    // append and prepend definition:
+
+    // append:	add (something) as an attachment or supplement
+    // prepend:	add (something) to the beginning of something else
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>charAt2</title>
+</head>
+<body>
+    <!-- Accessing a particular character in an array of objects -->
+
+
+    <p>Modify the array index and character number in the JavaScript code</p>
+    <p>Then click the button to display your chosen letter of your chosen band.</p>
+    
+    <button onclick="myFunction()">Try it</button>                                      <!-- When the button is clicked myFunction is executed -->
+    
+    <p class="writeTheLetterHere"></p>
+    
+    
+
+
+    <script>
+
+      // An array with objects inside:
+      var band = [
+        {
+          name: "Van Halen",
+          era: "80s",
+          genre: "Metal"
+        },
+        {
+          name: "Foo Fighters",
+          era: "90s",
+          genre: "Alternative"
+        },
+        {
+          name: "Julien-K",
+          era: "00s",
+          genre: "Electronic"
+        }
+      ];
+
+
+    
+    function myFunction() {
+      var myLetter = band[2].genre.charAt(2)                                            // Specify from the array band index, and of that, the object, and of that the character number.  // Change these properties to change the band and your chosen letter.
+      document.getElementsByClassName("writeTheLetterHere")[0].innerHTML = myLetter;    // Your chosen letter of your chosen band from the above line will be displayed to p class="writeTheLetterHere"
+    }
+    </script>
+
+
+</body>
+</html>

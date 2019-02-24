@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Storing and Retrieving Data Example</title>
+</head>
+<body>
+    
+    <input type="text" id="userInput1">Write input in this box. For example write some text or some numbers</input>
+    <br>
+    <button onclick="julienK()">Button 1 - Submit</button>
+
+    <p id="thisIsWhereIWillStoreNumbers" data-numberstoredhere=""></p>
+                                          <!--  data-numberstoredhere is intially left empty. 
+                                                The user's input will be written in here once Button 1 is pressed -->
+
+
+
+
+    <button onclick="stoneTemplePilots()">Button 2 - Press to display the data stored</button>
+
+    <!-- add this line for function to write into -->
+    <p id="demo1"></p>   
+
+    <br></br>
+    
+
+
+
+    <button onclick="fooFighters()">Button 3 - Press to remove the data stored.  Then press Button 2 again to confirm that the data (i.e. the Attribute) has been removed. After pressing Button 2 again, the data that is displayed above will disappear</button>
+
+
+
+
+    <script>
+
+        // Function to SET Attribute
+        function julienK(){
+        var storeUserInput = document.getElementById("userInput1").value;       // .value here refers to what the user typed into the input box
+        document.getElementById("thisIsWhereIWillStoreNumbers").setAttribute("data-numberstoredhere", storeUserInput);
+        }
+
+        // Function to GET Attribute
+        function stoneTemplePilots(){
+        var retrieveUserInput = document.getElementById("thisIsWhereIWillStoreNumbers").getAttribute("data-numberstoredhere");
+        document.getElementById("demo1").innerHTML = retrieveUserInput;
+        }
+        
+        // Function to REMOVE Attribute
+        function fooFighters(){
+        document.getElementById("thisIsWhereIWillStoreNumbers").removeAttribute("data-numberstoredhere");
+        }
+
+    </script>
+
+</body>
+</html>

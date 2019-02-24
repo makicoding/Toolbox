@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>How to create buttons using a for loop that references an array</h2>
+    
+
+
+
+    
+    <script>
+    // HOW TO CREATE BUTTONS USING A FOR LOOP THAT REFERENCES AN ARRAY
+
+
+
+    // Create a variable that references the html body (so that we can add the buttons to this further down in the script)
+    var myHtmlBody = document.getElementsByTagName("body")[0];
+ 
+ 
+    var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];    // An array of cars
+
+
+    // Create a for loop for the length of the array to display the different cars as buttons
+    for (i = 0; i < cars.length; i++) {                                                     // The for loop will repeat the length of the car array
+        var btn = document.createElement("button");                                         // Create a <button element>
+        btn.innerHTML = "Car Button: "+ cars[i];                                            // Name the button with "Car Button: " and car name
+        myHtmlBody.appendChild(btn);                                                        // Add the button to the HTML body
+        btn.addEventListener ("click", function() {                                         // Add a "click" event listener to the button
+            document.getElementsByClassName("outputText")[0].innerHTML = this.innerHTML;    // "this" refers to this particular button for this particular cycle of the loop
+        });                                                                                 // When you click the particular button, "Car Button: " and car name will be displayed to the div class="outputText"
+    }
+
+
+    // Create a div with a class called "outputText"
+    var divContainer = document.createElement("div");                               // Create a <div> element
+    divContainer.className = "outputText";                                          // Assign a class on divContainer called "demoClass"
+    var t1 = document.createTextNode("This is where the outputText will go");       // Create a text node
+    divContainer.appendChild(t1);                                                   // Append the text to <div>
+    document.body.appendChild(divContainer);                                        // Append <div> to <body>
+
+
+
+
+    // append and prepend definition:
+
+    // append:	add (something) as an attachment or supplement
+    // prepend:	add (something) to the beginning of something else
+    
+    </script>
+
+</body>
+</html>
