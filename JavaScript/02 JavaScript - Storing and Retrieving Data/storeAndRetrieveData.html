@@ -47,12 +47,14 @@
         function julienK(){
         var storeUserInput = document.getElementById("userInput1").value;       // .value here refers to what the user typed into the input box
         document.getElementById("thisIsWhereIWillStoreNumbers").setAttribute("data-numberstoredhere", storeUserInput);
+        console.log(storeUserInput);
         }
 
         // Function to GET Attribute
         function stoneTemplePilots(){
         var retrieveUserInput = document.getElementById("thisIsWhereIWillStoreNumbers").getAttribute("data-numberstoredhere");
         document.getElementById("demo1").innerHTML = retrieveUserInput;
+        console.log(retrieveUserInput);
         }
         
         // Function to REMOVE Attribute

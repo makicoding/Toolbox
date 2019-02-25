@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery - Dynamically Create Buttons, Set Attribute Class and Data</title>
+
+</head>
+<body>
+
+    <input type="text" id="userInput1">Write input in this box. For example write some text or some numbers</input>
+
+
+    <!-- jQuery Link -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <p id="thisIsWhereIWillStoreNumbers" data-numberstoredhere=""></p>
+                                            <!-- data-numberstoredhere is intially left empty. 
+                                                 The user's input will be written in here once Button 1 is pressed -->
+
+                                            <!-- The attribute name should not contain any uppercase letters, 
+                                                 and must be at least one character long after the prefix "data-". 
+                                                 In the above line of code, the attribute name is 
+                                                 "numberstoredhere" (this is what has to be lowercase) -->
+                                                
+                                            <!-- The data- attribute value can be any string -->      
+
+
+    <div class="jQueryDynamicallyGeneratedButtons1"></div>
+
+
+    <!-- add this line for stoneTemplePilots function to write into -->
+    <p id="demo1"></p>   
+
+    <br></br>
+    
+
+    <div class="jQueryDynamicallyGeneratedButtons2"></div>
+
+
+
+    <script>
+
+    // THE FOLLOWING WRITTEN ALL USING jQUERY
+
+    // ----------------------------------------
+    // CREATE BUTTONS WITH EVENT LISTENER
+
+        // Create Button 1 with click event listener
+        var myButton1 = $("<button>").text("Button 1 - Submit").attr("class", "button1");
+        $(".jQueryDynamicallyGeneratedButtons1").append(myButton1);
+
+        $(document).on("click", ".button1", function() {
+        julienK();
+        });
+
+
+        // Create Button 2 with click event listener
+        var myButton2 = $("<button>").text("Button 2 - Press to display the data stored").attr("class", "button2");
+        $(".jQueryDynamicallyGeneratedButtons1").append(myButton2);
+
+        $(document).on("click", ".button2", function() {
+        stoneTemplePilots();
+        });
+
+
+        // Create Button 3 with click event listener
+        var myButton3 = $("<button>").text("Button 3 - Press to remove the data stored.  Then press Button 2 again to confirm that the data (i.e. the Attribute) has been removed. After pressing Button 2 again, the console log should say undefined because the data attribute has been removed").attr("class", "button3");
+        $(".jQueryDynamicallyGeneratedButtons2").append(myButton3);
+
+        $(document).on("click", ".button3", function() {
+        fooFighters();
+        });
+
+
+    // ----------------------------------------
+    // FUNCTION TO SET, GET, REMOVE ATTRIBUTE
+
+        // Function to SET Attribute
+        function julienK(){
+        var storeUserInput = $("#userInput1").val();        // .val() here refers to what the user typed into the input box
+        $("#thisIsWhereIWillStoreNumbers").attr("data-numberstoredhere", storeUserInput);           // .attr is used to either Set Attribute or Get Attribute. In this line we are doing Set Attribute
+        console.log(storeUserInput);
+        }
+
+
+        // Function to GET Attribute
+        function stoneTemplePilots(){
+        var retrieveUserInput = $("#thisIsWhereIWillStoreNumbers").attr("data-numberstoredhere");   // .attr is used to either Set Attribute or Get Attribute. In this line we are doing Get Attribute
+        console.log(retrieveUserInput);
+        $("#demo1").html(retrieveUserInput);
+        }
+
+
+        // Function to REMOVE Attribute
+        function fooFighters(){
+        $("#thisIsWhereIWillStoreNumbers").removeAttr("data-numberstoredhere");
+        }
+
+</script>
+
+
+
+</body>
+</html>
