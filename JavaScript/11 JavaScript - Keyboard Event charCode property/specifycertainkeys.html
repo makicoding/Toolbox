@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>charCode</title>
+</head>
+<body>
+
+    <!-- charCode - Specify certain keys on a keyboard -->
+
+<p>Press any alphabet key on the keyboard (either lowercase or uppercase) in the input field to alert some text.</p>
+
+<input type="text" size="40" onkeypress="userPressedKey(event)">
+
+<p class="demo"></p>
+
+
+
+    <script>
+
+    function userPressedKey(event) {
+    var userKey = event.charCode || event.keyCode;                                                      // Use either charCode or keyCode, depending on browser support
+        if (userKey >= 65 && userKey <= 90 || userKey >= 97 && userKey <= 122 ) {                       // Here we specify the ASCII character set number for the keys
+            document.getElementsByClassName("demo")[0].innerHTML = "You pressed an alphabetical key!";
+        }
+    }
+
+
+
+    </script>
+
+</body>
+</html>
