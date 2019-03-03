@@ -215,3 +215,10 @@ function shopping() {
     // IF WANTING TO, INSERT API CALL HERE.  YOU'LL NEED TO INSERT categoryCode IN THE QUERY SEARCH.
 
 };
+
+
+
+// append and prepend definition:
+
+// append:	add (something) as an attachment or supplement
+// prepend:	add (something) to the beginning of something else
