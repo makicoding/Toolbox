@@ -1,0 +1,54 @@
+#iconsAppearHereDiv {
+    width: 700px;
+
+    padding: 0px;
+
+    background-color: red;
+    /* change background-color to show placement of Div */
+
+    position: absolute;
+    top: 0px;
+}
+
+.iconDiv {
+    width: 128px;
+    height: 130px;
+
+    margin: 5px 5px 5px 5px;
+
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+
+    background-color: #FFE51A;
+    text-align: center;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    cursor: pointer;
+    outline: 0;
+
+    float: left;
+}
+
+.iconDiv:hover {
+    background-color: cyan;
+}
+
+.iconImage {
+    width: 80px;
+    height: 80px;
+
+    border: 1px solid #a1a1a1;
+
+    margin: 4px 0px 1px 0px;
+
+    background-color: white;
+
+    position: relative;
+    top: 0px;
+}
+
+.iconText {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
