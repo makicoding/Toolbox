@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery - Insert keyword using `${}`</title>
+
+    <!-- jQuery Link -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <button id="clickMeButton">Click me to open Amazon with search keyword "Men's Jacket"</button>
+
+<script>
+
+    var clickMe = document.getElementById("clickMeButton");
+    clickMe.addEventListener("click", shopping);
+
+
+
+    // From here onwards we are using jQuery:
+
+    function shopping() {
+    
+        var searchKeyword = "Men's Jacket"       
+      
+        window.open(`https://www.amazon.com/s?k=${searchKeyword}`);     // remember to change "" to `` and then use ${} and insert var searchKeyword in between
+    
+    }
+
+</script>
+
+
+
+</body>
+</html>
