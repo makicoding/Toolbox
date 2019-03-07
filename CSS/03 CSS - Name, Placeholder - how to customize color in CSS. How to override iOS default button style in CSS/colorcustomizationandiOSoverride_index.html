@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Original standard code for viewport 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    -->
+    <!-- Viewport with auto-zooming-on-mobile-device disabled (user can still manually zoom if they wish) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <!-- JS Links -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"> </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="assets/css/colorcustomizationandiOSoverride_app_style.css">
+
+    <title>Name, Placeholder - how to customize in CSS</title>
+</head>
+
+<body>
+
+    <!-- App Container 1 -->
+    <div id="appContainer1">
+
+        <div id="whiteBackplate1"></div>
+
+        <p id="appHeader">Example</p>
+
+        <div id="appMainContent1">
+
+            <div id="instructions1">Please enter the following information</div>
+
+            <div class="container" id="inputDiv">
+                <form>
+                    <label for="gender">Gender:</label>
+                    <select name="gender" class="inputFields" id="inputGender">
+                        <option value="">Select Gender</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                    <br>
+
+                    <label for="travelDestination">Location:</label>
+                    <input type="text" class="inputFields" id="inputLocation" name="travelDestination" placeholder="City, Country"> </input><br>    <!-- Customize placeholder color (look at CSS) -->
+                    <label for="daterange">Dates:</label>
+                    <input type="text" class="inputFields" id="inputDates" name="daterange" value="" /> <br>    <!-- Customize daterange color (look at CSS) -->
+                                        
+                </form>
+
+                <input type="button" id="buttonSubmit" value="Submit"> <br>     <!-- How to override iOS default button style (look at CSS) -->
+
+                <div id="missingInfoMessage"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="assets/javascript/colorcustomizationandiOSoverride_script.js"></script>
+
+</body>
+
+</html>
