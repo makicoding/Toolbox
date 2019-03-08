@@ -14,6 +14,7 @@ var datePicker = function () {
     timeZone: 'utc',
     autoApply: true                             // (true/false) Hide the apply and cancel buttons, and automatically apply a new date range as soon as two dates are clicked.
   }, function (start, end, label) {
+    $("#inputDates").css("color", "black");     // This sets the CSS text color to black in id="inputDates" after the user has made dates selection
     var dateArray = [];
     while (start <= end) {
       dateArray.push(moment(start).unix());
