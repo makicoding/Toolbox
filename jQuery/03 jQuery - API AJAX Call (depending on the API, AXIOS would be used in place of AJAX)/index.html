@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GifTastic</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Bungee+Inline|Carter+One|Contrail+One|Faster+One|Fugaz+One|IBM+Plex+Mono|Jura|Monoton|Orbitron|Oxygen+Mono|Press+Start+2P|Russo+One|Share+Tech+Mono|Sunflower:300" rel="stylesheet">
+
+    <!-- Meyerweb CSS Reset Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">    
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+    <!-- Backplate to go behind Header, Instructions, and JavaScript-dynamically-created-elements -->
+    <div class="backplate"></div>
+
+    <!-- Header -->
+    <div class="header">GIFY-BABY!</div>
+
+    <!-- Instructions -->
+    <p class="instructions">Enter any keyword of your choice and hit search!  Upon clicking the search button, the app will make a call to the Giphy.com API (Application Programming Interface), retrieve data based on the user's keyword, and then display a total of ten Gifs below.</p>
+
+
+
+    <!-- jQuery Link and JavaScript Link must come here since "var btn" must appear after the Header,
+         and before class="newUserButtons" --> 
+
+    <!-- jQuery Link -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- JavaScript Link -->
+    <script src="assets/javascript/script.js"></script>
+
+
+
+    <!-- User keyword stored here -->
+    <p class="thisIsWhereIWillStoreUserKeyword" data-userkeywordstoredhere=""></p>
+    
+
+
+    <!-- Container for Gifs -->
+    <div class="gifsAppearHere"></div>
+
+</body>
+</html>
