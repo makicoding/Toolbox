@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String replace() method</title>
+</head>
+<body>
+
+    <p>Click the button to replace "Microsoft" with "Apple" in the paragraph below:</p>
+    
+    <p id="demo1">Visit Microsoft!</p>
+    
+    <button onclick="replaceDemo1()">Try it</button>
+    
+    <br></br>
+    
+
+
+    <p>Click the button to replace " " with "-" in the paragraph below:</p>
+    
+    <p id="demo2">American Pie</p>
+    
+    <button onclick="replaceDemo2()">Try it</button>
+    
+    
+    
+    <script>
+        function replaceDemo1() {
+            var myString1 = document.getElementById("demo1").innerHTML; 
+            var myReplaced1 = myString1.replace("Microsoft", "Apple");
+            document.getElementById("demo1").innerHTML = myReplaced1;
+        }
+        
+        
+        function replaceDemo2() {
+            var myString2 = document.getElementById("demo2").innerHTML; 
+            var myReplaced2 = myString2.replace(" ", "-");              // Here if you want to simply delete a space instead you would write:
+                                                                        // var myReplaced2 = myString2.replace(" ", "");
+            document.getElementById("demo2").innerHTML = myReplaced2;
+        }
+    
+    </script>
+    
+    </body>
+</html>
