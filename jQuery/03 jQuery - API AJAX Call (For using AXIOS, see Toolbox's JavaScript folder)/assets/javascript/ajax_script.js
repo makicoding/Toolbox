@@ -71,9 +71,6 @@ function getFromApi(){
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         retrieveUserInput + "&api_key=9rqYZE6HplBHPqKeUBfUFVboSn02keof";                // retrieveUserInput is the user's keyword originally entered into the input box
 
-        // DEPENDING ON THE API, AXIOS WOULD BE USED IN PLACE OF AJAX. IN THIS CASE WE WOULD WRITE:
-        // axios.get(queryURL).then(function(response) { });
-        // IF USING AXIOS, REMEMBER TO INCLUDE A CDN OF AXIOS WITHIN A SCRIPT TAG IN THE HTML
         $.ajax({                                                                        // Calling the Ajax 
         url: queryURL,                                                                  // the url is referencing the above URL listed in the variable
         method: "GET"                                                                   // The retrieval method of the data is GET
