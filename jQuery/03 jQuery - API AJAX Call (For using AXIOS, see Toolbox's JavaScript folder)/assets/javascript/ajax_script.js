@@ -68,6 +68,7 @@ function getFromApi(){
         
         $(".gifsAppearHere").empty();                                                   // Empty the div class="gifsAppearHere"
 
+        // Maki's Giphy API Key: 9rqYZE6HplBHPqKeUBfUFVboSn02keof
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         retrieveUserInput + "&api_key=9rqYZE6HplBHPqKeUBfUFVboSn02keof";                // retrieveUserInput is the user's keyword originally entered into the input box
 
