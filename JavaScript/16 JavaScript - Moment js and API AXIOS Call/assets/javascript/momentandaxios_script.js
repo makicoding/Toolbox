@@ -15,9 +15,9 @@ console.log(userInput + " is on tour at the following:");
 
 function concertThisCall() {
 
+    // AXIOS CALL
     var queryURL = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
 
-    // AXIOS CALL
     axios.get(queryURL).then(function(response) {
 
         //console.log(response);    // See the entire response to identify which parts of it we want to use
