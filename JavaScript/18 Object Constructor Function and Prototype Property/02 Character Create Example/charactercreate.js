@@ -1,5 +1,5 @@
 // ----------------------------------------
-// OBJECT CONSTRUCTOR FUNCTION
+// OBJECT CONSTRUCTOR FUNCTION (this is a blueprint)
 
 function Character(name, profession, gender, age, strength, damagereceived) {
     this.name = name;
