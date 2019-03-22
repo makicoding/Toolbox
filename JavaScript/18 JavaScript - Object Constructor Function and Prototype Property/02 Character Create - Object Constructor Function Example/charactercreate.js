@@ -7,9 +7,10 @@ function Character(name, profession, gender, age, strength, damagereceived) {
     this.gender = gender;
     this.age = age;
     this.strength = strength;
-    this.damagereceived = damagereceived
-    // printStats FUNCTION
+    this.damagereceived = damagereceived;
+    // printStats FUNCTION (printStats function is also the same as a method. A method is just a function that is a property of an object)
     this.printStats = function() {
+
         console.log("Name: " + this.name + "\nProfession: " + this.profession +
         "\nGender: " + this.gender + "\nAge: " + this.age + "\nStrength: " +
         this.strength + "\nDamage Received: " + this.damagereceived);
@@ -17,12 +18,14 @@ function Character(name, profession, gender, age, strength, damagereceived) {
 
         // You could also write the above console log like this:
         // console.log(this);     // Prints to the console the entire object
+    
     }
 
-    // IsAlive FUNCTION
+    // isAlive FUNCTION (isAlive function is also the same as a method. A method is just a function that is a property of an object)
     // Prints whether or not this character is alive by looking into damagereceived
     // and determining whether it is above or below zero.
     this.isAlive = function() {
+        
         if (this.damagereceived <= 0) {
             console.log("CHARACTER IS ALIVE AND WELL");
         }
@@ -32,7 +35,9 @@ function Character(name, profession, gender, age, strength, damagereceived) {
         else {
             console.log("CHARACTER NEEDS TO GO BACK TO BASE");
         }
-    };
+
+    }
+
 }
   
 // Sets the variables "superhero1", "superhero2", "superhero3" to be Character objects 
