@@ -1,4 +1,4 @@
-// HOW TO WRITE AND USE slice() AND join() TO ACCEPT MULTIPLE WORD INPUT
+// HOW TO WRITE AND USE slice() AND join() TO ACCEPT MULTIPLE WORD INPUT (and single words too)
 
 // In the JS File we would write:
 
@@ -26,3 +26,13 @@
 // node arraySliceArrayJoin myFunction ariana grande
 
 // node arraySliceArrayJoin myFunction welcome to the fold
+
+
+
+// ----------------------------------------
+// TO CAPTURE EITHER MULTIPLE WORD INPUT OR NO WORDS AT ALL (i.e. no userInput for process.argv[3])
+// Use the following code: 
+// var userInput2 = (process.argv.slice(3).join(" ") || process.argv[3]);   // Use Array slice() and Array join() to accept multiple words (and single words too) for process.argv[3]
+                                                                            // For example: Ariana Grande
+                                                                            // Use OR || statement for var userInput2 to capture process.argv[3] without slice().join() too
+                                                                            // in the case of when a user doesn't enter any input text for process.argv[3]
