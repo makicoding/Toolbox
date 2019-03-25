@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parseFloat()</title>
+</head>
+<body>
+
+    <p>parseFloat() converts a string into a point number (a number with decimal points). You can even pass in strings with random text in them. Spaces are allowed. Only the first number is returned</p>
+
+    <p>Click the button to parse different strings.</p>
+
+    <button onclick="julienK()">Try it</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+
+        function julienK() {
+            var a = parseFloat("10") + "<br>";
+            var b = parseFloat("10.00") + "<br>";
+            var c = parseFloat("10.33") + "<br>";
+            var d = parseFloat("34 45 66") + "<br>";
+            var e = parseFloat("   60   ") + "<br>";
+            var f = parseFloat("40 years") + "<br>";
+            var g = parseFloat("He was 40") + "<br>";
+            var h = parseFloat("40 He was") + "<br>";
+        
+            var n = a + b + c + d + e + f + g + h;
+            document.getElementById("demo").innerHTML = n;
+        }
+
+    </script>
+        
+</body>
+</html>

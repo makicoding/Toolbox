@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parseInt()</title>
+</head>
+<body>
+
+    <p>parseInt() converts a string into an integer (a whole number). Spaces are allowed. Only the first number is returned</p>
+    
+    <p>Click the button to parse different strings.</p>
+
+    <button onclick="aerosmith()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+        function aerosmith() {
+        var a = parseInt("10") + "<br>";
+        var b = parseInt("10.00") + "<br>";
+        var c = parseInt("10.33") + "<br>";
+        var d = parseInt("34 45 66") + "<br>";
+        var e = parseInt("   60   ") + "<br>";
+        var f = parseInt("40 years") + "<br>";
+        var g = parseInt("He was 40") + "<br>";
+        var h = parseInt("40 He was ") + "<br>";
+
+        var i = parseInt("10", 10)+ "<br>";
+        var j = parseInt("010")+ "<br>";
+        var k = parseInt("10", 8)+ "<br>";
+        var l = parseInt("0x10")+ "<br>";
+        var m = parseInt("10", 16)+ "<br>";
+
+        var n = a + b + c + d + e + f + g + h + "<br>" + i + j + k + l + m;
+        document.getElementById("demo").innerHTML = n;
+        }
+
+    </script>
+
+</body>
+</html>

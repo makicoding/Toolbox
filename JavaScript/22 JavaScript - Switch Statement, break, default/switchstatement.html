@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch Statement, break, default</title>
+</head>
+<body>
+    
+    <p>The switch statement is used to perform different actions based on different conditions.</p>
+
+    <p id="demo"></p>
+    
+    <script>
+        var myDay = "Sun";	// Change "Sun" to a different string to see what happens (for example Mon, Tue, Cheese)
+        
+        switch (myDay) {
+            case "Sun":
+                myMessage = "Hello, today is Sunday";
+                break;
+                
+            case "Mon":
+                myMessage = "Hello, today is Monday";
+                break;
+                
+            case "Tue":
+                myMessage = "Hello, today is Tuesday";
+                break;
+                
+            case "Wed":
+                myMessage = "Hello, today is Wednesday";
+                break;
+                
+            case "Thu":
+                myMessage = "Hello, today is Thursday";
+                break;
+                
+            case "Fri":
+                myMessage = "Hello, today is Friday";
+                break;
+                
+            case  "Sat":
+                myMessage = "Hello, today is Saturday";
+                break;
+                
+            // If var myDay has an invalid input (i.e. it is not Sun, Mon, Tue, Wed, Thu, Fri, or Sat, write a default message:
+            
+            default:
+                myMessage = "Invalid input for var myDay. Please use three letters only."
+            
+        }
+
+        document.getElementById("demo").innerHTML = myMessage;
+    
+    </script>  
+
+</body>
+</html>

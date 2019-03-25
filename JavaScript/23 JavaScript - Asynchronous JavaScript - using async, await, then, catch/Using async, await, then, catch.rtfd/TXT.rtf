@@ -1,0 +1,289 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fnil\fcharset0 Consolas;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red41\green41\blue41;\red226\green209\blue106;
+\red45\green53\blue61;\red255\green255\blue255;\red39\green91\blue211;\red232\green30\blue106;\red236\green236\blue236;
+\red191\green131\blue194;\red34\green34\blue34;\red193\green193\blue193;\red234\green121\blue57;\red109\green188\blue135;
+\red15\green15\blue15;\red135\green135\blue135;\red88\green196\blue193;\red51\green51\blue51;\red245\green186\blue68;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c21176\c21176\c21176;\cssrgb\c90980\c84706\c49020;
+\cssrgb\c23137\c27059\c30588;\cssrgb\c100000\c100000\c100000;\cssrgb\c19608\c45098\c86275;\cssrgb\c93725\c23137\c49020;\cssrgb\c94118\c94118\c94118;
+\cssrgb\c80000\c60000\c80392;\cssrgb\c17647\c17647\c17647;\cssrgb\c80000\c80000\c80000;\cssrgb\c94118\c55294\c28627;\cssrgb\c49412\c77647\c60000;
+\cssrgb\c7059\c7059\c7059;\cssrgb\c60000\c60000\c60000;\cssrgb\c40392\c80392\c80000;\cssrgb\c26275\c26275\c26275;\cssrgb\c97255\c77255\c33333;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\vieww26420\viewh18400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await"}}{\fldrslt 
+\f0\fs36 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 https://scotch.io/tutorials/asynchronous-javascript-using-async-await}}
+\f1\fs36 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 \
+
+\fs24 \
+\
+\pard\pardeftab720\sl660\sa300\partightenfactor0
+
+\f2\b\fs60 \cf3 \cb4 \ulnone \strokec3 Asynchronous Javascript using Async - Await\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \cb6 \strokec5 Async/await is a relatively new way to write asynchronous code in Javascript. Before we used\'a0{\field{\*\fldinst{HYPERLINK "http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/"}}{\fldrslt 
+\fs38 \cf7 \strokec7 callbacks}}\'a0and\'a0{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/javascript-promises-for-dummies"}}{\fldrslt 
+\fs38 \cf7 \strokec7 promises}}. Async/await actually builds on top of promises. If you have not used promises before, this is a good point to go brush up on them, find link to a useful article\'a0{\field{\*\fldinst{HYPERLINK "http://techinpink.com/2017/02/24/introduction-to-javascript-promises/"}}{\fldrslt 
+\fs38 \cf7 \strokec7 here}}.\
+\pard\pardeftab720\sl500\sa760\partightenfactor0
+
+\b \cf3 \strokec3 Why\'a0
+\f3\b0\fs28 \cf8 \cb9 \strokec8 async/await
+\f2\b\fs40 \cf3 \cb6 \strokec3 ?
+\b0 \cf5 \strokec5 \'a0Well, simply put, async/await allows us to write asynchronous code in a synchronous manner.\
+\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await#toc-async-functions"}}{\fldrslt 
+\b\fs60 \cf3 \strokec3 Async functions}}\cb1 \
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+\cf5 \cb6 To create an async function all we need to do is add the\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0keyword before the function definition, like this:\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf10 \strokec10 return\cf12 \strokec12  \cf14 \strokec14 "Hey!"\cf12 \strokec12 ;\
+\}\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\f2\fs40 \cf5 \cb6 \strokec5 The one thing you need to know about async functions is that;\'a0
+\b \cf3 \strokec3 they always returns a promise
+\b0 \cf5 \strokec5 .\
+In the case where we explicitly return something that is not a promise, like above, the return value is automatically wrapped into a resolved promise with the resolved value being the non-promise. For the code above,\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 asyncFunc().then(result => console.log(result))
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0will return the string\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 Hey!
+\f2\fs40 \cf5 \cb6 \strokec5 .\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+
+\b\fs60 \cf3 \strokec3 \
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await#toc-await"}}{\fldrslt \cf3 Await}}\cf15 \strokec15 \
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 The\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 await
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0keyword\'a0
+\b \cf3 \strokec3 can only be used within an\'a0
+\f3\b0\fs28 \cf8 \cb9 \strokec8 async
+\f2\b\fs40 \cf3 \cb6 \strokec3 \'a0block
+\b0 \cf5 \strokec5 , otherwise it'll throw a syntax error. This means you cannot use\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 await
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0in the top level of our code, basically, don't use it by itself.\
+\pard\pardeftab720\sl500\sa760\partightenfactor0
+
+\b \cf3 \strokec3 When do we use it?
+\b0 \cf5 \strokec5 \'a0If we have an asynchronous function inside of an async block. So let's say we need to fetch some data from our server and then use that data within our async block. We will use\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 await
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0to pause the function execution and resume after the data comes in. For example;\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+  \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 );\
+  \cf10 \strokec10 return\cf12 \strokec12  data;\
+\}\
+\pard\pardeftab720\sl500\sa760\partightenfactor0
+
+\f2\b\fs40 \cf3 \cb6 \strokec3 Why use await?
+\b0 \cf5 \strokec5 \'a0Instead of using await we could have just used a promise right?\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf10 \strokec10 let\cf12 \strokec12  data;\
+  \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 )\
+    .\cf13 \strokec13 then\cf12 \strokec12 ((result) \cf17 \strokec17 =>\cf12 \strokec12  \{\
+      data \cf17 \strokec17 =\cf12 \strokec12  result\
+    \});\
+  \cf10 \strokec10 return\cf12 \strokec12  data;\
+\}\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\f2\fs40 \cf5 \cb6 \strokec5 Await is simply a more elegant way to write a promise\'a0
+\b \cf3 \strokec3 within an async function
+\b0 \cf5 \strokec5 . It improves readability immensely and hence the reason we use it.\
+Let's assume we have a couple of asynchronous functions within our\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0block. Instead of chaining promises we could do this, which is much cleaner:\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+  \cf10 \strokec10 const\cf12 \strokec12  response \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 );\
+  \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  response.\cf13 \strokec13 json\cf12 \strokec12 ();\
+\
+  \cf10 \strokec10 return\cf12 \strokec12  data;\
+\}\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+
+\f2\b\fs60 \cf3 \cb6 \strokec3 \
+\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await#toc-error-handling"}}{\fldrslt \cf3 Error handling}}\cf15 \strokec15 \
+\pard\pardeftab720\sl500\sa760\partightenfactor0
+
+\fs40 \cf3 \strokec3 How do we handle errors?
+\b0 \cf5 \strokec5 \'a0We have a few options, let's explore them:\
+\pard\pardeftab720\sl460\sa760\partightenfactor0
+
+\b\fs42 \cf18 \strokec18 Try..catch\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 This is the most common way to handle errors when using\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async-await
+\f2\fs40 \cf5 \cb6 \strokec5 , good old\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 try-catch
+\f2\fs40 \cf5 \cb6 \strokec5 . All you need to do is encapsulate your code in a\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 try
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0block and handle any errors that occur in a\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 catch
+\f2\fs40 \cf5 \cb6 \strokec5 .\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf10 \strokec10 try\cf12 \strokec12  \{\
+    \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+    \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 );\
+    \cf10 \strokec10 return\cf12 \strokec12  data;\
+  \} \cf10 \strokec10 catch\cf12 \strokec12 (error) \{\
+    console.\cf13 \strokec13 log\cf12 \strokec12 (\cf14 \strokec14 "error"\cf12 \strokec12 , error);\
+    \cf16 \strokec16 // appropriately handle the error\cf12 \strokec12 \
+  \}\
+\}\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\f2\fs40 \cf5 \cb6 \strokec5 If an error occurs when fetching data from our endpoint, execution is transferred to the\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 catch
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0block and we can handle whatever error is thrown. If we have multiple\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 await
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0lines the catch block catches the errors that occur in all the lines.\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf10 \strokec10 try\cf12 \strokec12  \{\
+    \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+    \cf10 \strokec10 const\cf12 \strokec12  response \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 );\
+    \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  response.\cf13 \strokec13 json\cf12 \strokec12 ();\
+\
+    \cf10 \strokec10 return\cf12 \strokec12  data;\
+  \} \cf10 \strokec10 catch\cf12 \strokec12  (\cf19 \strokec19 error\cf12 \strokec12 ) \{\
+    \cf13 \strokec13 alert\cf12 \strokec12 (error); \cf16 \strokec16 // catches both errors\cf12 \strokec12 \
+  \}\
+\}\
+\pard\pardeftab720\sl460\sa760\partightenfactor0
+
+\f2\b\fs42 \cf18 \cb6 \strokec18 If not try..catch\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 We can alternatively append\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 .catch()
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0on the promise generated by the\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0function. Let's recap: Remember that the\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0function returns a promise. If an error occurs then it returns a rejected promise.So on the function call we could do this:\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf13 \cb11 \strokec13 asyncFunc\cf12 \strokec12 ().\cf10 \strokec10 catch\cf12 \strokec12 ((error) \cf17 \strokec17 =>\cf12 \strokec12  \{\
+  \cf16 \strokec16 // handle error appropriately\cf12 \strokec12 \
+\});\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+
+\f2\b\fs60 \cf3 \cb6 \strokec3 \
+\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await#toc-fun-facts"}}{\fldrslt \cf3 Fun facts}}\cf15 \strokec15 \
+\pard\pardeftab720\sl460\sa760\partightenfactor0
+
+\fs42 \cf18 \strokec18 Async on class methods\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 Class methods can be\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async
+\f2\fs40 \cf5 \cb6 \strokec5 .\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 class\cf12 \strokec12  \cf19 \strokec19 Example\cf12 \strokec12 \{\
+  \cf10 \strokec10 async\cf12 \strokec12  \cf13 \strokec13 asyncMethod\cf12 \strokec12 () \{\
+    \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 );\
+    \cf10 \strokec10 return\cf12 \strokec12  data\
+  \}\
+\}\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\f2\fs40 \cf5 \cb6 \strokec5 To call the method we'd do:\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf12 \cb11 \strokec12   \cf10 \strokec10 const\cf12 \strokec12  exampleClass \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 new\cf12 \strokec12  \cf19 \strokec19 Example\cf12 \strokec12 ();\
+  exampleClass.\cf13 \strokec13 asyncMethod\cf12 \strokec12 ().\cf13 \strokec13 then\cf12 \strokec12 (\cf16 \strokec16 //do whatever you want with the result)\cf12 \strokec12 \
+\pard\pardeftab720\sl460\sa760\partightenfactor0
+
+\f2\b\fs42 \cf18 \cb6 \strokec18 \
+\
+Await is thenable\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 We can append a\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 .then()
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0on an await.\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf16 \strokec16 // fetch data from a url endpoint\cf12 \strokec12 \
+  \cf10 \strokec10 const\cf12 \strokec12  data \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 )\
+    .\cf13 \strokec13 then\cf12 \strokec12 ((result) \cf17 \strokec17 =>\cf12 \strokec12  \cf10 \strokec10 return\cf12 \strokec12  result.names)\
+\
+  \cf10 \strokec10 return\cf12 \strokec12  data;\
+\}\
+\pard\pardeftab720\sl460\sa760\partightenfactor0
+
+\f2\b\fs42 \cf18 \cb6 \strokec18 \
+\
+Await <> Promise.all\
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 If we have multiple promises we could use\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 Promise.all
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0with\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 await
+\f2\fs40 \cf5 \cb6 \strokec5 .\
+\pard\pardeftab720\sl560\partightenfactor0
+
+\f3\fs30 \cf10 \cb11 \strokec10 async\cf12 \strokec12  \cf10 \strokec10 function\cf12 \strokec12  \cf13 \strokec13 asyncFunc\cf12 \strokec12 () \{\
+  \cf10 \strokec10 const\cf12 \strokec12  response \cf17 \strokec17 =\cf12 \strokec12  \cf10 \strokec10 await\cf12 \strokec12  Promise.\cf13 \strokec13 all\cf12 \strokec12 ([\
+    axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 ),\
+    axios.\cf10 \strokec10 get\cf12 \strokec12 (\cf14 \strokec14 "/some_url_endpoint"\cf12 \strokec12 )\
+  ]);\
+  \cf17 \strokec17 ...\cf12 \strokec12 \
+\}\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+
+\f2\b\fs60 \cf3 \cb6 \strokec3 \
+\
+\pard\pardeftab720\sl660\sa342\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://scotch.io/tutorials/asynchronous-javascript-using-async-await#toc-conclusion"}}{\fldrslt \cf3 Conclusion}}\cf15 \strokec15 \
+\pard\pardeftab720\sl480\sa760\partightenfactor0
+
+\b0\fs40 \cf5 \strokec5 In summary,\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async/await
+\f2\fs40 \cf5 \cb6 \strokec5 \'a0is a cleaner syntax to write asynchronous Javascript code. It enhances readability and flow of your code.\
+Things to keep in mind while using\'a0
+\f3\fs28 \cf8 \cb9 \strokec8 async/await
+\f2\fs40 \cf5 \cb6 \strokec5 :\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl680\partightenfactor0
+\ls1\ilvl0\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Async functions return a promise.\cb1 \
+\ls1\ilvl0\cb6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Await can only be used inside an async block.\cb1 \
+\ls1\ilvl0\cb6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Await waits until the function("promise") resolves or rejects.\cb1 \
+}

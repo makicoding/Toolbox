@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number()</title>
+</head>
+<body>
+    
+    <p>The Number() method converts a string to a number.
+        Sometimes it’s an integer. Other times it’s a point number. And if you pass in a string with random text in it, you’ll get NaN, an acronym for “Not a Number.”</p>
+    
+    <p>As a result of this inconsistency, it’s a less safe choice than parseInt() and parseFloat(). If you know the format of the number you’d like, use those instead. If you want the string to fail with NaN if it has other characters in it, Number() may actually be a better choice.</p>
+    
+    <p id="demo"></p>
+    
+    <script>
+
+    document.getElementById("demo").innerHTML = 
+        Number(true) + "<br>" +
+        Number(false) + "<br>" +
+        Number("10") + "<br>" + 
+        Number("  10") + "<br>" +
+        Number("10  ") + "<br>" +
+        Number(" 10  ") + "<br>" +
+        Number("10.33") + "<br>" + 
+        Number("10,33") + "<br>" +
+        Number("10 33") + "<br>" +
+        Number("John");
+    
+    </script>
+
+</body>
+</html>
