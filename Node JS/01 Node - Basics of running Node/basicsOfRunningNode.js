@@ -2,6 +2,18 @@
 // BASICS OF RUNNING NODE IN THE COMMAND LINE
 
 // ----------
+// npm init -y          (must do this at start of any node project if you are going to be using npm install to install packages!)
+
+// At the start of any node project, this must be done:
+// Navigate to the root of project and type the following into the command line: npm init -y 
+// This will initialize a package.json file for the project. 
+// The package.json file is required for installing third party npm packages and saving their version numbers. 
+// If you fail to initialize a package.json file, it will be troublesome, and at times almost impossible for 
+// anyone else to run your code after cloning your project.
+
+
+
+// ----------
 // process.argv
 
 // process.argv will print out any command line arguments.
@@ -23,14 +35,22 @@
 
 
 // ----------
-// npm init -y          (must do this at start of any node project if you are going to be using npm install to install packages!)
+// var userInput2 = process.argv.slice(3).join(" ");
 
-// At the start of any node project, this must be done:
-// Navigate to the root of project and type the following into the command line: npm init -y 
-// This will initialize a package.json file for the project. 
-// The package.json file is required for installing third party npm packages and saving their version numbers. 
-// If you fail to initialize a package.json file, it will be troublesome, and at times almost impossible for 
-// anyone else to run your code after cloning your project.
+// Array slice() returns the selected elements in an array, as a new array object.
+// slice() selects the elements starting at the given start argument.
+
+// join() joins the elements of an array into a string, and returns the string.
+// The elements will be separated by a specified separator. The default separator is comma (,).
+// Here we specified the separator to be a space (" ") instead of the default comma (,).
+
+
+
+// To capture either multiple words or no words at all (i.e. no userInput for process.argv[3]), use the following code: 
+// var userInput2 = (process.argv.slice(3).join(" ") || process.argv[3]);   // Use Array slice() and Array join() to accept multiple words (and single words too) for process.argv[3]
+                                                                            // For example: Ariana Grande
+                                                                            // Use OR || statement for var userInput2 to capture process.argv[3] without slice().join() too
+                                                                            // in the case of when a user doesn't enter any input text for process.argv[3]
 
 
 
