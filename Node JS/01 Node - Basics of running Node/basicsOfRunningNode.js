@@ -14,6 +14,15 @@
 
 
 // ----------
+// Create a .gitignore file 
+
+// inside the .gitignore file, include these two lines:
+// node_modules     // this ignores all the node modules that were installed via npm install.  You want to ignore this and not upload to GitHub because this folder can get huge.
+// .DS_Store
+
+
+
+// ----------
 // process.argv
 
 // process.argv will print out any command line arguments.
@@ -31,6 +40,15 @@
 
 // To run a JavaScript file in node, type into the command line:
 // node nameOfJsFile userInput1 userInput2      (replacing nameOfJsFile, userInput1, userInput2 with appropriate file name / text)
+
+
+
+// If you want single words such as arianagrande for process.argv[3], just type as is. 
+// For example in the command line you would type node nameOfJsFile userInput1 arianagrande .
+// However if you want multiple words for process.argv[3] like ariana grande, 
+// then you need to type this in to the command line using quotes like "ariana grande":
+// For example in the command line you would type node nameOfJsFile userInput1 "ariana grande" .
+// The alternative to doing this is to use slice() and join() as outlined below and this would accept multiple words for userInput2.
 
 
 

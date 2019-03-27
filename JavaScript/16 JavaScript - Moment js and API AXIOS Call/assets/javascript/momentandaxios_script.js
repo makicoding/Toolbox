@@ -24,6 +24,7 @@ function concertThisCall() {
 
         for(var i = 0; i < response.data.length; i++) {
             var venueLocation = response.data[i].venue.country + ", " + response.data[i].venue.city + " " + response.data[i].venue.region;
+            console.log("----------------------------------------")
             console.log("Name of venue: " + response.data[i].venue.name);
             console.log("Venue location: " + venueLocation);
             console.log("Date of event: " + moment(response.data[i].datatime).format("MM/DD/YYYY")); 
