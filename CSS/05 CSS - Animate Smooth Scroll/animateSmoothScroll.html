@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animate Smooth Scroll</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="animateSmoothScroll.css">
+
+
+</head>
+<body>
+
+    <!-- HOW TO Animate Smooth Scroll - By using jQuery, the smooth scrolling is compatible across all browsers.
+    This is the cross-browser solution    
+    Referenced from:
+    https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
+    -->
+
+    <!-- This is another way of smooth scrolling using scroll-behavior: smooth , however this is not supported in Safari or IE 
+    https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+    -->
+    
+
+    
+    <div class="main" id="section1">
+        
+        <section class="section1Style">
+            <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+        </section>
+
+    </div>
+    
+    <div class="main" id="section2">
+        
+        <section class="section2Style">
+            <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+        </section>
+
+    </div>
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- JavaScript Link -->
+    <script src="animateSmoothScroll.js"></script>
+
+</body>
+</html>

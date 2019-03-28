@@ -1,0 +1,18 @@
+body, html, .main {
+    width: 100%;
+    height: 100%;
+    
+    transform: translate(-3px, -3px);
+}
+  
+section {
+    min-height: 100%;       /* Change this value to change the height of the section */
+}
+
+.section1Style {
+    background-color: yellow;
+}
+
+.section2Style {
+    background-color: orange;
+}
