@@ -3,6 +3,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+/* myLorem */
+.myLorem {
+    font-size: 200px;
+}
+
 /* ---------------------------------------- */
 /* Style navigation menu links */
 .topnav a {
@@ -15,9 +20,8 @@ body {
 
 /* Style the hamburger menu */
 .topnav a.icon {
-    background: black;
-    display: block;
-    position: absolute;
+    background: #3feb67;
+    position: fixed;
     right: 0;
     top: 0;
 }

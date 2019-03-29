@@ -2,7 +2,12 @@
 body {
     font-family: "Lato", sans-serif;
 }
-  
+
+/* myLorem */
+.myLorem {
+  font-size: 200px;
+}
+
 /* The sidebar menu */
 .sidebar {
     height: 100%; /* 100% Full-height */

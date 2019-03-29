@@ -9,3 +9,7 @@
 .icon:hover {
     background-color: red !important;       /* Here we use !important to override w3 schools' CSS */
 }
+
+.myLorem {
+    font-size: 200px;
+  }

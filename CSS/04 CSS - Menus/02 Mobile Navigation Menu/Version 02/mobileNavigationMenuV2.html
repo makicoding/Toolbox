@@ -4,47 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curtain Menu No Animation</title>
+    <title>Mobile Navigation Menu</title>
 
     <!-- Load icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS Link -->
-    <link rel="stylesheet" type="text/css" href="curtainMenuNoAnimation.css">
+    <link rel="stylesheet" type="text/css" href="mobileNavigationMenuV2.css">
 
 </head>
 <body>
     
-    <!-- HOW TO Curtain Menu No Animation
+    <!-- HOW TO Mobile Navigation Menu
     Referenced from:
-    https://www.w3schools.com/howto/howto_js_curtain_menu.asp
+    https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
     -->
 
 
 
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>      <!-- &times; is the icon for X -->
-        
-        <!-- Overlay content -->
-        <div class="overlay-content">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-
-    </div>
-    
-    
-
     <!-- Top Navigation Menu -->
     <div class="topnav">
+        <a href="#home" class="active">Logo</a>
 
-        <!-- "Hamburger menu" / "Bar icon" -->
-        <a href="javascript:void(0);" class="icon" onclick="openNav()">
+        <!-- Navigation links (hidden by default) -->
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
         
@@ -56,9 +46,9 @@
     <div class="myLorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque ipsam laudantium, assumenda ipsa eius cum enim fugit ex officia dolores? Ipsam accusantium numquam modi voluptates earum cupiditate quod ut.</div>
 
 
-    
+
     <!-- JavaScript Link -->
-    <script src="curtainMenuNoAnimation.js"></script>
+    <script src="mobileNavigationMenuV2.js"></script>
 
 </body>
 </html>

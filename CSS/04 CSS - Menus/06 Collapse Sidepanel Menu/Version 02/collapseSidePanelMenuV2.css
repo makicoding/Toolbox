@@ -45,12 +45,18 @@ body {
 .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #3fbe67;
     color: white;
     padding: 10px 15px;
     border: none;
+
+    position: fixed;
 }
   
 .openbtn:hover {
     background-color: #444;
+}
+
+.myLorem {
+    font-size: 200px;
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Collapse Side Panel Menu</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="collapseSidePanelMenuV1.css">
+
+</head>
+<body>
+    
+    <!-- HOW TO Left and Right Side Navigation Menu
+    Referenced from:
+    https://www.w3schools.com/w3css/w3css_sidebar.asp
+    -->
+
+
+
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+      
+    <button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button> 
+    <h2>Collapsed Sidepanel</h2>
+    <p>Content...</p>
+
+
+
+    <!-- Text on page-->
+    <div class="myLorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque ipsam laudantium, assumenda ipsa eius cum enim fugit ex officia dolores? Ipsam accusantium numquam modi voluptates earum cupiditate quod ut.</div>
+
+
+
+    <!-- JavaScript Link -->
+    <script src="collapseSidePanelMenuV1.js"></script>
+
+</body>
+</html>

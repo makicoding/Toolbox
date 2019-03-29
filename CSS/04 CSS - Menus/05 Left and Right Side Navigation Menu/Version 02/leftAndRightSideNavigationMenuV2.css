@@ -1,0 +1,28 @@
+.navbar {
+    width: 100%;
+
+    background-color: blue !important;      /* Here we use !important to override w3 schools' CSS */
+
+    position: fixed;
+    top: 0px;
+}
+
+.icon {
+    background-color: blue !important;      /* Here we use !important to override w3 schools' CSS */
+}
+
+.icon:hover {
+    background-color: red !important;       /* Here we use !important to override w3 schools' CSS */
+}
+
+.branding {
+    color: white;
+
+    position: fixed;
+    top: -10px;
+    left: 100px;
+}
+
+.myLorem {
+    font-size: 200px;
+}
