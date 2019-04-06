@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Specify how many decimal places to display in JavaScript using toFixed()</title>
+</head>
+<body>
+    
+    <p>Click the button to display the fixed number.</p>
+
+    <button onclick="fooFighters()">Try it</button>
+    
+    <p id="demo"></p>
+
+    
+
+    <script>
+
+        function fooFighters() {
+        var myNumber = 5.56789;
+        var x = myNumber.toFixed(2);
+        document.getElementById("demo").innerHTML = x;
+        }
+
+    </script>
+
+
+
+</body>
+</html>
