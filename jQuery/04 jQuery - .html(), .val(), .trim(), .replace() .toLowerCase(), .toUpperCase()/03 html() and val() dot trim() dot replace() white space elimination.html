@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.html() .val() .trim() .replace() white space elimination jQuery</title>
+
+    <!-- jQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <p>First Name & Last Name (include spaces before and after the string): <input type="text" id="name"></p>
+
+    <div>
+        Set the value of the input field by using .val(), 
+        <br>
+        eliminate all spaces before and after the string by using .trim() note that any space that occurs in between the string (i.e. between first name and last name) are not removed, 
+        <br>
+        use .replace(/\s/g,'') to match all white space and then eliminate it. The g character means to repeat the search through the entire string.
+        <br>
+        Then display it to the page:
+    </div>
+
+    <br></br>
+
+    <button>Submit</button>
+
+    <p id="displayTheName"></p>
+
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var inputName = $("#name").val().trim().replace(/\s/g,'');      // jQuery gets id="name" ($ is get) and sets the value that was entered into the input box,
+                                                                                // it then uses .trim() to eliminate all spaces before and after the string. trim() does not change the original string (so any space that occurs in between the string (i.e. between first name and last name) are not removed),
+                                                                                // then .replace(/\s/g,'') is used to match all white space and then eliminate it. The g character means to repeat the search through the entire string.
+                console.log(inputName);
+
+                $("#displayTheName").html(inputName);                           // jQuery gets id="displayTheName" and writes inputName to the HTML using .html()
+            });
+        });
+    
+    </script>
+
+</body>
+</html>

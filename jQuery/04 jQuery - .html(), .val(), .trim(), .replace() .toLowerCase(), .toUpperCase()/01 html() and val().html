@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.html() .val() jQuery</title>
+
+    <!-- jQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+    <p>Name: <input type="text" id="name"></p>
+
+    <p>Set the value of the input field and display it to the page:</p>
+    
+    <button>Submit</button>
+
+    <p id="displayTheName"></p>
+
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                var inputName = $("#name").val();           // jQuery gets id="name" ($ is get) and sets the value that was entered into the input box.
+
+                console.log(inputName);
+
+                $("#displayTheName").html(inputName);       // jQuery gets id="displayTheName" and writes inputName to the HTML using .html()
+            });
+        });
+    
+    </script>
+
+</body>
+</html>
