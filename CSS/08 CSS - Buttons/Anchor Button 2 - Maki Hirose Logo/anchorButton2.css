@@ -1,0 +1,54 @@
+.logoButton {
+    width: 180px;
+    height: 65px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    background-color:#2953ca;
+    text-align: left;
+    text-decoration: none;
+    border-style: none;
+    line-height: 1;
+    
+    padding: 35px 0px 0px 10px;
+
+    cursor: pointer;
+    outline: 0;
+  
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-90px, 0px);  
+
+    opacity: 1;
+}
+/* 
+The outline: 0 in the above code removes the 
+blue outline for the button when the button 
+is clicked.
+
+Changing the opactiy in the above code
+will change how much see-through the button
+becomes.  A value of 0 means completely see
+through.  A value of 1 means not see through. 
+*/
+
+.logoButton:hover {
+    background-color: #2953ca;
+}
+/* 
+Change background-color in above code for 
+.logoButton:hover to change the button color 
+when a mouse hovers over it.
+*/
+
+.logoButton:active {
+    background-color: #2953ca;
+}
+/* 
+Change background-color in above code 
+for .logoButton:hover to change the button 
+color when a mouse clicks on it.
+*/

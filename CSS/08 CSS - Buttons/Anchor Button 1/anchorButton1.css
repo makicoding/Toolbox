@@ -1,0 +1,13 @@
+a {
+    background-color: red;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: blue;
+}
+
+a:focus {
+    background-color: green;
+}
