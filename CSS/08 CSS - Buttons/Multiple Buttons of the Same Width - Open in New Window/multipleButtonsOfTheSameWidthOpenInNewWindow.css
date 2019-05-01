@@ -40,7 +40,6 @@
     text-decoration: none;
   
     cursor: pointer;
-    outline: 0;
 
     position: relative;
     left: 0px;
@@ -49,4 +48,8 @@
 .indexPageButton:hover {
     background-color: black;
     color: white;
+}
+
+.indexPageButton:focus {
+    outline: 0;             /* This gets rid of the blue outline around the button when the button is clicked */
 }
