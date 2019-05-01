@@ -1,0 +1,52 @@
+.navigationContainer {
+    width: 300px;
+    height: 200px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+
+    background-color: white;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150px, -100px);
+}
+
+.indexPageButtonsContainer {
+    width: 260px;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.indexPageButton {
+    width: 260px;
+    height: 40px;
+
+    margin: 0px 0px 20px 0px;
+    border: none;
+    border-radius: 5px;
+  
+    background-color: #FFC948;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+  
+    cursor: pointer;
+    outline: 0;
+
+    position: relative;
+    left: 0px;
+}
+  
+.indexPageButton:hover {
+    background-color: black;
+    color: white;
+}
