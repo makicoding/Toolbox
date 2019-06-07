@@ -1,0 +1,30 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh18400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 How to close local host for both React App and API server for Full Stack React app in terminal (this is when a Full Stack app uses both React and an API, and when the app doesn\'92t seem to work).\
+\
+\
+\
+If the app doesn\'92t work, make sure to kill BOTH port 3000 AND port 3001 via the command line.\
+\
+Port 3000 is used for the React app and port 3001 is used for the API server (Confirm API server port number by looking at the server.js file).\
+\
+\
+\
+In terminal type in the following:\
+\
+lsof -i:3000\
+\
+\
+\
+Then to kill the local host type in the following (P ID Number is the string of 5 numbers before the name of the root folder of the computer like Capture)\
+\
+kill -9 insertPiDNumber\
+\
+\
+\
+Then repeat the same steps above for port 3001.}
