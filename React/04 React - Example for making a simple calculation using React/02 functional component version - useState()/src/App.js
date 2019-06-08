@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 
+// Functional Component - useState()
+// useState() is the most important React Hook introduced as part of React 16.8 (ES2019), stable version released on February 6, 2019.
+// Note that not all browsers (particularly older browsers) support useState()
 function App() {
 
   const[count, setCount] = useState(0);
@@ -12,6 +15,10 @@ function App() {
 
   )
 }
+
+
+
+// Class Component version (the below code does the same thing as the above code)
 
 // class App extends React.Component {
 //   constructor(props) {
