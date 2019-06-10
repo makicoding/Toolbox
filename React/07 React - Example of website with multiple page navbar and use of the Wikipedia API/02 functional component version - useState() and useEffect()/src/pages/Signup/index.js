@@ -3,7 +3,6 @@ import Container from "../../components/Container";
 import Col from "../../components/Col";
 import Row from "../../components/Row";
 
-// Functional component - useState
 const Signup = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
